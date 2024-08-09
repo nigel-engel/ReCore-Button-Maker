@@ -10,25 +10,26 @@
   --button-margin: 10px;
   --button-text-font-size: 18px;
   --button-text-font-weight: bold;
+  --color-blue-50: #eff6ff;
   --color-blue-300: #93c5fd;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
   --color-blue-600: #2563eb;
   --color-blue-800: #1e40af;
   --color-blue-900: #1e3a8a;
-  --color-slate-500: #64748b;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #020617;
   --color-blue-950: #172554;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #020617;
   --font-md: 1rem;
   --font-sm: 0.875rem;
 }
 
 /* Button Styles */
 
-Button {
-  width: var(--button-width);
+#Button {
+  width: var(--button-width, auto);
   height: var(--button-height);
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
@@ -37,5 +38,8 @@ Button {
   padding: var(--button-padding);
   margin: var(--button-margin);
   font-size: var(--button-text-font-size);
+  white-space: nowrap;
+  display: inline-block;
+  min-width: fit-content;
 }
 

@@ -1,11 +1,11 @@
 h3 {
-  color: var(--color-slate-400);
+  color: var(--color-gray-400);
   font-size: var(--font-md);
   font-weight: 500;
 }
 
 p {
-  color: var(--color-slate-400);
+  color: var(--color-gray-400);
   font-size: var(--font-sm);
   font-weight: 300;
 }
