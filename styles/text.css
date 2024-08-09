@@ -1,0 +1,5 @@
+h3 {
+  color: var(--color-slate-300);
+  font-size: var(--font-md);
+  font-weight: 500;
+}

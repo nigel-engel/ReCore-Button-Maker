@@ -9,20 +9,20 @@
 }
 
 .item1 {
-  background-color: #0f172a;
-  border-right: 1px solid #1e293b;
+  background-color: var(--color-slate-900);
+  border-right: 1px solid var(--color-slate-800);
 
 }
 
 .item2 {
-  background-color: #020617;
+  background-color: var(--color-slate-950);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .item3 {
-  background-color: #0f172a;
+  background-color: var(--color-slate-900);
 }
 
 @media (max-width: 768px) {
