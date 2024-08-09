@@ -1,0 +1,27 @@
+/* Default Button Styles  */
+:root {
+  --button-width: 200px;
+  --button-height: 60px;
+  --button-bg-color: #2563eb;
+  --button-text-color: white;
+  --button-border: 1px solid #ffffff;
+  --button-border-radius: 5px;
+  --button-padding: 10px 20px;
+  --button-margin: 10px;
+  --button-text-font-size: 18px;
+  --button-text-font-weight: bold;
+}
+
+/* Button Styles */
+
+Button {
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+  font-size: var(--button-text-font-size);
+}

@@ -1,0 +1,42 @@
+input {
+  border: 1px solid #ccc;  /* Light gray border by default */
+  padding: 5px 10px;
+  font-size: 16px;
+  outline: none;  /* Removes the default focus outline */
+  transition: border-color 0.2s ease-in-out;
+  background
+}
+
+input:hover {
+  border-color: #999;  /* Darker gray border on hover */
+}
+
+input:focus {
+  border-color: #007bff;  /* Blue border on focus/click */
+  box-shadow: 0 0 0 1px #007bff;  /* Adds a subtle blue glow */
+}
+
+input::selection {
+  background-color: #e6f3ff; /* Light blue highlight */
+  color: #000; /* Text color when highlighted */
+}
+
+/* Hide number arrows in input type number (below) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Colour picker */
+#colorPicker {
+  /* Your styles here */
+  border: 2px solid black; !important;
+  padding: 0px; !important;
+
+}
