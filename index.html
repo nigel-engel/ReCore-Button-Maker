@@ -3,29 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/master.css">
     <link rel="stylesheet" href="/styles/var.css">
     <link rel="stylesheet" href="/styles/numberInputField.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/backgroundGrid.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>ReCore Button Maker</title>
   </head>
   <body>
-    <div class="grid grid-cols-12 h-screen w-screen">
+    <div class="container">
+      <div class="item item1"><p>ReCore</p></div>
+      <div class="item item2 backgroundGrid">
+        <button id="Button">Change My Color</button>
+      </div>
+      <div class="item item3"></div>
+
+    </div>
+    <!-- <div class="grid grid-cols-12 h-screen w-screen">
       <div class="bg-slate-900 col-span-2 border-r border-solid border-slate-800 p-5">
         <h3>Size and Layout</h3>
         <h2>Width</h2>
       </div>
-      <div class="bg-slate-950 col-span-8">
+      <div class=" ">
         <div>
           <input type="color" id="colorPicker" />
           <input type="number" value="200" id="widthInput" onclick="this.select()">
-          <button id="Button">Change My Color</button>
+          
         </div>
       </div>
       <div class="bg-red-500 col-span-2"></div>
-    </div>
+    </div> -->
     <script src="/scripts/buttonWidth.js"></script>
     <script src="/scripts/colourPicker.js"></script>
   </body>

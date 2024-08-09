@@ -1,6 +1,5 @@
 /* background grid */
 .backgroundGrid {
-  height: 16rem;
   background-image: linear-gradient(to right, #0f172a 1px, transparent 1px),
   linear-gradient(to bottom, #0f172a 1px, transparent 1px);
   background-size: 2.5rem 2.5rem;
