@@ -26,7 +26,7 @@ widthInput.addEventListener("keydown", function (event) {
 
 // Prevent 'e' from being entered
 widthInput.addEventListener("keypress", function (event) {
-  if (event.key === 'e' || event.key === 'E') {
+  if (event.key === "e" || event.key === "E") {
     event.preventDefault();
   }
 });
@@ -42,4 +42,8 @@ window.addEventListener("resize", updateInputValue);
 
 // MutationObserver to watch for changes in button content
 const observer = new MutationObserver(updateInputValue);
-observer.observe(button, { childList: true, characterData: true, subtree: true });
+observer.observe(button, {
+  childList: true,
+  characterData: true,
+  subtree: true,
+});

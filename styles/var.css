@@ -40,6 +40,4 @@
   font-size: var(--button-text-font-size);
   white-space: nowrap;
   display: inline-block;
-  min-width: fit-content;
 }
-

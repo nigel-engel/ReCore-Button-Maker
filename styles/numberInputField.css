@@ -12,21 +12,18 @@ input {
 }
 
 input:hover {
-  border: 2px solid var(--color-gray-800);  
+  background-color: var(--color-gray-800);  
   outline: none; 
 }
 
 input:focus {
   border-color: var(--color-blue-600);
   background-color: var(--color-gray-950);
- 
 }
 
 input::selection {
   background-color: var(--color-blue-600);
   color: white;
-
- 
 }
 
 /* Hide number arrows in input type number (below) */
