@@ -1,7 +1,7 @@
 /* Default Button Styles  */
 :root {
-  --button-width: 200px;
-  --button-height: 60px;
+  
+   
   --button-bg-color: #2563eb;
   --button-text-color: white;
   --button-border: 1px solid #ffffff;
@@ -10,18 +10,18 @@
   --button-margin: 10px;
   --button-text-font-size: 18px;
   --button-text-font-weight: bold;
-  --color-blue-50: #eff6ff;
-  --color-blue-300: #93c5fd;
-  --color-blue-600: #2563eb;
-  --color-blue-800: #1e40af;
-  --color-blue-900: #1e3a8a;
-  --color-blue-950: #172554;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-gray-950: #020617;
+  --color-blue-50: #ddf4ff;
+  --color-blue-300: #54aeff;
+  --color-blue-600: #0550ae;
+  --color-blue-800: #0a3069;
+  --color-blue-900: #002155;
+  --color-blue-1000: #000d2a;
+  --color-gray-300: #afb8c1;
+  --color-gray-400: #8c959f;
+  --color-gray-500: #6e7781;
+  --color-gray-800: #2d333a;
+  --color-gray-900: #1a1e23;
+  --color-gray-1000: #030405;
   --font-md: 1rem;
   --font-sm: 0.875rem;
 }
@@ -29,8 +29,8 @@
 /* Button Styles */
 
 #Button {
-  width: var(--button-width, auto);
-  height: var(--button-height);
+  width: max(var(--button-width, auto), fit-content);
+  height: var(--button-height, auto);
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   border: var(--button-border);

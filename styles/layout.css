@@ -19,7 +19,7 @@
 }
 
 .item2 {
-  background-color: var(--color-gray-950);
+  background-color: var(--color-gray-1000);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,4 +45,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.valueValue {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

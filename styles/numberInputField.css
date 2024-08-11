@@ -5,20 +5,20 @@ input {
   color: var(--color-gray-300);
   font-size: var(--font-sm);
   border-radius: 2px;
-  outline: none;  
+  outline: none;
   max-width: 55px;
   max-height: 10px;
   cursor: default;
 }
 
 input:hover {
-  background-color: var(--color-gray-800);  
-  outline: none; 
+  background-color: var(--color-gray-800);
+  outline: none;
 }
 
 input:focus {
   border-color: var(--color-blue-600);
-  background-color: var(--color-gray-950);
+  background-color: var(--color-gray-1000);
 }
 
 input::selection {
@@ -33,15 +33,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-
 
 /* Colour picker */
 #colorPicker {
   /* Your styles here */
-  border: 2px solid black; !important;
-  padding: 0px; !important;
-
+  border: 2px solid black !important;
+  padding: 0px !important;
 }

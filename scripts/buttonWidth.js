@@ -1,49 +1,75 @@
 const widthInput = document.getElementById("widthInput");
 const button = document.getElementById("Button");
 
+function getMinButtonWidth() {
+  const clone = button.cloneNode(true);
+  clone.style.width = "auto";
+  clone.style.position = "absolute";
+  clone.style.visibility = "hidden";
+  document.body.appendChild(clone);
+  const contentWidth = clone.offsetWidth;
+  document.body.removeChild(clone);
+
+  const computedStyle = window.getComputedStyle(button);
+  const paddingLeft = parseInt(computedStyle.paddingLeft);
+  const paddingRight = parseInt(computedStyle.paddingRight);
+
+  return contentWidth + paddingLeft + paddingRight;
+}
+
 function updateButtonWidth(width) {
-  if (width === "") {
-    document.documentElement.style.removeProperty("--button-width");
-    button.style.width = "auto";
-  } else {
-    document.documentElement.style.setProperty("--button-width", width + "px");
-    button.style.width = width + "px";
-  }
+  const minWidth = getMinButtonWidth();
+  const finalWidth = Math.max(width, minWidth);
+  ButtonModule.updateStyle("width", `${finalWidth}px`);
+  ButtonModule.updateCSSVariable("width", `${finalWidth}px`);
+}
+
+function getCurrentButtonWidth() {
+  return Math.max(
+    parseInt(window.getComputedStyle(button).width, 10),
+    getMinButtonWidth()
+  );
 }
 
 function updateInputValue() {
-  const actualWidth = button.offsetWidth;
-  widthInput.value = actualWidth;
+  widthInput.value = getCurrentButtonWidth();
 }
 
-widthInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    const selectedWidth = event.target.value;
-    updateButtonWidth(selectedWidth);
-    updateInputValue(); // Update input value after changing button width
-  }
-});
+updateInputValue();
 
-// Prevent 'e' from being entered
-widthInput.addEventListener("keypress", function (event) {
+widthInput.addEventListener("keydown", function (event) {
   if (event.key === "e" || event.key === "E") {
     event.preventDefault();
   }
+
+  if (event.key === "Enter") {
+    const width = parseInt(this.value, 10);
+    if (!isNaN(width) && width > 0) {
+      updateButtonWidth(width);
+    }
+    updateInputValue();
+  }
 });
 
-button.addEventListener("transitionend", updateInputValue);
+widthInput.addEventListener("blur", function () {
+  if (this.value.trim() === "") {
+    updateButtonWidth(getMinButtonWidth());
+  } else {
+    const width = parseInt(this.value, 10);
+    if (!isNaN(width) && width > 0) {
+      updateButtonWidth(width);
+    }
+  }
+  updateInputValue();
+});
 
-// Initial setup
-updateButtonWidth(widthInput.value);
-updateInputValue();
+const resizeObserver = new ResizeObserver(() => {
+  updateButtonWidth(getCurrentButtonWidth());
+  updateInputValue();
+});
+resizeObserver.observe(button);
 
-// Update input when window is resized (in case of responsive design affecting button width)
-window.addEventListener("resize", updateInputValue);
-
-// MutationObserver to watch for changes in button content
-const observer = new MutationObserver(updateInputValue);
-observer.observe(button, {
-  childList: true,
-  characterData: true,
-  subtree: true,
+window.addEventListener("resize", () => {
+  updateButtonWidth(getCurrentButtonWidth());
+  updateInputValue();
 });

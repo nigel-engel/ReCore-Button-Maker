@@ -1,0 +1,1 @@
+const heightInput = document.getElementById("heightInput");
