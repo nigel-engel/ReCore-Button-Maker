@@ -1,59 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/master.css" />
-    <link rel="stylesheet" href="/styles/var.css" />
-    <link rel="stylesheet" href="/styles/numberInputField.css" />
-    <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/backgroundGrid.css" />
-    <link rel="stylesheet" href="/styles/text.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-icon-fav-32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>ReCore Button Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Maker</title>
   </head>
   <body>
-    <div class="container">
-      <div class="item item1">
-        <!-- size and layout-->
-        <div class="sizeLayout1">
-          <h3>Size and Layout</h3>
-          <div class="valueValue">
-            <div class="keyValue">
-              <p>W</p>
-              <input
-                type="number"
-                id="widthInput"
-                inputmode="numeric"
-                pattern="[0-9]*"
-              />
-            </div>
-            <div class="keyValue">
-              <p>H</p>
-              <input
-                type="number"
-                id="heightInput"
-                inputmode="numeric"
-                pattern="[0-9]*"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item item2 backgroundGrid">
-        <button id="Button">Call</button>
-      </div>
-      <div class="item item3"></div>
-    </div>
-
-    <script src="/scripts/buttonWidth.js"></script>
-    <script src="/scripts/colourPicker.js"></script>
-    <script src="/scripts/buttonHeight.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-
-<!-- <input type="color" id="colorPicker" /> -->

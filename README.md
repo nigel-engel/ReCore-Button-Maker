@@ -1,14 +1,8 @@
-# ReCore-Button-Maker
+# React + Vite
 
-Lightweight Button Maker App
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Info
+Currently, two official plugins are available:
 
-## Purpose
-
-Better my HTML, CSS and Javascript programming skills
-
-## Building in public
-
-I'm building this app in public so people can watch the journey in real time.
-I have a public project available in github so you can see what features i'm working on
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
