@@ -1,29 +1,19 @@
 import React from "react";
+import Navbar from "./components/layout/Navbar";
+import Body from "./components/layout/Body";
 
 export default function App() {
   return (
     <>
-      <div className="navbar">
-        <div className="logo">
-          <img
-            src="/assets/recore-icon-logo-white.png"
-            id="logo-img"
-            width="32px"
-          />
-          <h1>Button Maker</h1>
-        </div>
-        <button>Export</button>
-      </div>
-      <div className="grid">
+      <Navbar />
+      <Body />
+
+      /* <div className="body">
         <div className="menu">
           <h2>Properties</h2>
           <div className="keyPairs">
             <label htmlFor="button-color">Button Color</label>
-            <input
-              type="color"
-              id="button-color"
-              placeholder="call-to-action "
-            />
+            <input type="color" id="button-color" />
           </div>
           <div className="keyPairsGrid">
             <div className="keyPairs">
@@ -45,7 +35,7 @@ export default function App() {
               <input type="number" id="border-radius" />
             </div>
           </div>
-          <div className="border-bottom"></div>
+          <div className="border-bottom"></div> */
           <h2>Typography</h2>
           <div className="keyPairs">
             <label htmlFor="font-select dropdown">Font</label>

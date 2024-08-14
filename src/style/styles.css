@@ -59,7 +59,7 @@ body {
   color: var(--gray-1);
 }
 
-.grid {
+.body {
   display: grid;
   grid-template-columns: 16rem 1fr;
   height: calc(100vh - 60px); /* Adjust based on your navbar height */
