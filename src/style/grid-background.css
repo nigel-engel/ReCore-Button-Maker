@@ -1,0 +1,9 @@
+.grid-background {
+  background-color: var(--black-10);
+  background-image: 
+    linear-gradient(var(--gray-10) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gray-10) 1px, transparent 1px);
+  background-size: 1rem 1rem;
+  width: 100%;
+  height: 100%;
+}
