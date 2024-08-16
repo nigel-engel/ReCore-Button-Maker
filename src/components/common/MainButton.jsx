@@ -8,6 +8,9 @@ export default function MainButton({ text, style }) {
     borderRadius: `${style.borderRadius}px`,
     backgroundColor: `${style.backgroundColor}`,
     borderColor: `${style.borderColor}`,
+    fontSize: `${style.fontSize}px`,
+    fontWeight: style.fontWeight,
+    color: `${style.fontColor}`,
     // Add other style properties here as needed
   };
 
