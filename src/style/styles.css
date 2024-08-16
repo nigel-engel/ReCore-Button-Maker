@@ -23,6 +23,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
