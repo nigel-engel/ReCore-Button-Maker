@@ -9,7 +9,7 @@ export default function MainButton({ style }) {
     fontSize: `${style.fontSize}px`,
     fontWeight: style.isBold ? 'bold' : 'normal',
     color: style.fontColor,
-    // Add other style properties here as needed
+    fontFamily: style.fontFamily,
   };
 
   return (

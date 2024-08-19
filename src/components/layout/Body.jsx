@@ -5,7 +5,7 @@ import InputNumber2 from "../common/InputNumber2";
 import FontDropdown from "../common/FontDropdown";
 import InputText1 from "../common/InputText1";
 import BodyGrid from "../common/BodyGrid";
-import ButtonTextInput from "../common/ButtonTextInput"; // Add this import
+import ButtonTextInput from "../common/ButtonTextInput";
 
 export default function Body() {
   const [buttonStyle, setButtonStyle] = useState({
@@ -18,7 +18,8 @@ export default function Body() {
     fontSize: 20,
     fontColor: "#f6f8fa",
     isBold: false,
-    buttonText: "Click me", // Add this line
+    buttonText: "Click me",
+    fontFamily: "Helvetica",
   });
 
   const handleStyleChange = (property, value) => {
@@ -32,6 +33,14 @@ export default function Body() {
     setButtonStyle((prevStyle) => ({
       ...prevStyle,
       isBold: !prevStyle.isBold,
+    }));
+  };
+
+  const handleFontChange = (e) => {
+    const selectedFont = e.target.value;
+    setButtonStyle((prevStyle) => ({
+      ...prevStyle,
+      fontFamily: selectedFont,
     }));
   };
 
@@ -87,7 +96,7 @@ export default function Body() {
           isBold={buttonStyle.isBold}
           onBoldToggle={handleBoldToggle}
         />
-        <FontDropdown id="font-family" label="Font Family" />
+        <FontDropdown id="font-family" label="Font Family" onChange={handleFontChange} />
         <InputColor
           label="Font Color"
           id="font-color"

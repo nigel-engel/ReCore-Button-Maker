@@ -5,13 +5,13 @@
 /* Change the highlight color */
 ::selection {
   background-color: var(--blue-6);
-  color: var(--gray-1)
+  color: var(--gray-1);
 }
 
 /* For Firefox */
 ::-moz-selection {
   background-color: var(--blue-6);
-  color: var(--gray-1)
+  color: var(--gray-1);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -46,6 +46,17 @@ body {
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid var(--gray-8);
+}
+
+.NavBarLink button {
+  padding: 0.5rem 1rem;
+  background-color: var(--black-10);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-1);
+  border: 1px solid var(--gray-8);
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .navbar button {

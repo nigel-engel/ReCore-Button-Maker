@@ -4,9 +4,11 @@ import Button from "../common/Button";
 
 export default function Navbar() {
   return (
-    <div className="navbar">
-      <Logo />
-      <Button text="Export" />
-    </div>
+    <>
+      <div className="navbar">
+        <Logo />
+        <Button text="Export" />
+      </div>
+    </>
   );
 }
