@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box;
 }
+
+/* Change the highlight color */
+::selection {
+  background-color: var(--blue-6);
+  color: var(--gray-1)
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: var(--blue-6);
+  color: var(--gray-1)
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;

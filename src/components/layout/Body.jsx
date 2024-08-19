@@ -9,8 +9,8 @@ import ButtonTextInput from "../common/ButtonTextInput"; // Add this import
 
 export default function Body() {
   const [buttonStyle, setButtonStyle] = useState({
-    paddingX: 35,
-    paddingY: 20,
+    paddingX: 30,
+    paddingY: 15,
     borderWidth: 0,
     borderColor: "#000000",
     borderRadius: 4,
@@ -63,7 +63,9 @@ export default function Body() {
           value1={buttonStyle.borderWidth}
           value2={buttonStyle.borderRadius}
           onChange1={(value) => handleStyleChange("borderWidth", Number(value))}
-          onChange2={(value) => handleStyleChange("borderRadius", Number(value))}
+          onChange2={(value) =>
+            handleStyleChange("borderRadius", Number(value))
+          }
         />
         <InputColor
           label="Border Color"
@@ -73,6 +75,7 @@ export default function Body() {
         />
         <Title text="Typography" />
         <ButtonTextInput
+          label="Button Text"
           initialText={buttonStyle.buttonText}
           onTextChange={(text) => handleStyleChange("buttonText", text)}
         />
