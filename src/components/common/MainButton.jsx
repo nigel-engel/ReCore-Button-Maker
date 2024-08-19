@@ -1,22 +1,20 @@
 import React from "react";
 
-export default function MainButton({ text, style }) {
+export default function MainButton({ style }) {
   const buttonStyle = {
     padding: `${style.paddingY}px ${style.paddingX}px`,
     border: `${style.borderWidth}px solid ${style.borderColor}`,
-    borderWidth: `${style.borderWidth}px`,
     borderRadius: `${style.borderRadius}px`,
-    backgroundColor: `${style.backgroundColor}`,
-    borderColor: `${style.borderColor}`,
+    backgroundColor: style.backgroundColor,
     fontSize: `${style.fontSize}px`,
-    fontWeight: style.fontWeight,
-    color: `${style.fontColor}`,
+    fontWeight: style.isBold ? 'bold' : 'normal',
+    color: style.fontColor,
     // Add other style properties here as needed
   };
 
   return (
     <div className="main-button">
-      <button style={buttonStyle}>{text}</button>
+      <button style={buttonStyle}>{style.buttonText}</button>
     </div>
   );
 }

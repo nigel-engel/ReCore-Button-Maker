@@ -1,20 +1,22 @@
 import React from "react";
+import BoldButton from "./BoldButton";
 
-export default function InputText1({ 
-  id, 
+export default function InputText1({
+  id,
   label,
   value,
-  onChange
+  onChange,
+  isBold,
+  onBoldToggle,
 }) {
-
   const handleFocus = (event) => {
     event.target.select();
   };
 
-  const handleChange = (event, setter) => {
+  const handleChange = (event) => {
     const value = event.target.value;
-    if (value === "" || value.length <= 3) {
-      setter(Number(value));
+    if (value === "" || value.length <= 2) {
+      onChange(Number(value));
     }
   };
 
@@ -22,14 +24,22 @@ export default function InputText1({
     <div className="keyPairsGrid">
       <div className="keyPairs">
         <label htmlFor={id}>{label}</label>
-        <input 
-        type="number" 
-        id={id}
-        value={value}
-        onChange={(e) => handleChange(e, onChange)}
-        onFocus={handleFocus} />
+        <input
+          type="number"
+          id={id}
+          value={value}
+          onChange={handleChange}
+          onFocus={handleFocus}
+        />
       </div>
-      <div className="keyPairs"></div>
+      <div  >
+        <BoldButton
+          id="font-weight"
+          label="Font Weight"
+          isBold={isBold}
+          onToggle={onBoldToggle}
+        />
+      </div>
     </div>
   );
 }

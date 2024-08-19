@@ -16,7 +16,7 @@ export default function InputNumber2({
 
   const handleChange = (event, setter) => {
     const value = event.target.value;
-    if (value === "" || value.length <= 3) {
+    if (value === "" || value.length <= 2) {
       setter(Number(value));
     }
   };
