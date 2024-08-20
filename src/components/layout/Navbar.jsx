@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../common/Logo";
 import Button from "../common/Button";
-import ExportPopup from "../common/ExportPopup";
+import ExportPopup from "../common/Exportpopup";
 import { generateEmbedCode } from "../common/generateEmbedCode";
 
 export default function Navbar({ buttonStyle }) {
