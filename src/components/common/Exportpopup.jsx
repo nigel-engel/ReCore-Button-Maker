@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "/src/style/ExportPopup.css";
 
 export default function ExportPopup({ isOpen, onClose, embedCode }) {
   const [isCopied, setIsCopied] = useState(false);
@@ -24,9 +25,11 @@ export default function ExportPopup({ isOpen, onClose, embedCode }) {
         </div>
         <div className="modal-footer">
           <button onClick={handleCopy} className="btn btn-primary">
-            {isCopied ? 'Copied!' : 'Copy to Clipboard'}
+            {isCopied ? "Copied!" : "Copy to Clipboard"}
           </button>
-          <button onClick={onClose} className="btn btn-secondary">Close</button>
+          <button onClick={onClose} className="btn btn-secondary">
+            Close
+          </button>
         </div>
       </div>
     </div>
