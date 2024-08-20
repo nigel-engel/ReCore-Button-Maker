@@ -1,6 +1,6 @@
 export function generateEmbedCode(style) {
   if (!style) {
-    return ''; // Return an empty string if style is undefined
+    return ''; 
   }
 
   const tableStyle = `

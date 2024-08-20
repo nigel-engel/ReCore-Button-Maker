@@ -5,7 +5,6 @@ import ExportPopup from "../common/ExportPopup";
 import { generateEmbedCode } from "../../components/common/generateEmbedCode";
 
 export default function Navbar({ buttonStyle }) {
-  console.log("Navbar received buttonStyle:", buttonStyle);
 
   const [isExportPopupOpen, setIsExportPopupOpen] = useState(false);
 
@@ -14,7 +13,6 @@ export default function Navbar({ buttonStyle }) {
   };
 
   const embedCode = generateEmbedCode(buttonStyle);
-  console.log("Embed code generated:", embedCode);
 
   return (
     <>
