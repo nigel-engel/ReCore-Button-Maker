@@ -12,19 +12,18 @@ export default function Navbar({ buttonStyle }) {
   };
 
   const embedCode = generateEmbedCode(buttonStyle);
-  {
-    return (
-      <>
-        <div className="navbar">
-          <Logo />
-          <Button text="Export" onClick={handleExportClick} />
-        </div>
-        <ExportPopup
-          isOpen={isExportPopupOpen}
-          onClose={() => setIsExportPopupOpen(false)}
-          embedCode={embedCode}
-        />
-      </>
-    );
-  }
+
+  return (
+    <>
+      <div className="navbar">
+        <Logo />
+        <Button text="Export" onClick={handleExportClick} />
+      </div>
+      <ExportPopup
+        isOpen={isExportPopupOpen}
+        onClose={() => setIsExportPopupOpen(false)}
+        embedCode={embedCode}
+      />
+    </>
+  );
 }
