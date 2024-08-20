@@ -6,6 +6,7 @@ import FontDropdown from "../common/FontDropdown";
 import InputText1 from "../common/InputText1";
 import BodyGrid from "../common/BodyGrid";
 import ButtonTextInput from "../common/ButtonTextInput";
+import Navbar from "./Navbar";
 
 export default function Body() {
   const [buttonStyle, setButtonStyle] = useState({
@@ -45,67 +46,76 @@ export default function Body() {
   };
 
   return (
-    <div className="body">
-      <div className="menu">
-        <Title text="Properties" />
-        <InputColor
-          label="Button Color"
-          id="button-color"
-          value={buttonStyle.backgroundColor}
-          onChange={(value) => handleStyleChange("backgroundColor", value)}
-        />
-        <InputNumber2
-          id1="padding-x"
-          id2="padding-y"
-          label1="Padding x"
-          label2="Padding y"
-          value1={buttonStyle.paddingX}
-          value2={buttonStyle.paddingY}
-          onChange1={(value) => handleStyleChange("paddingX", Number(value))}
-          onChange2={(value) => handleStyleChange("paddingY", Number(value))}
-        />
-        <InputNumber2
-          id1="border-width"
-          id2="button-radius"
-          label1="Border Width"
-          label2="Button Radius"
-          value1={buttonStyle.borderWidth}
-          value2={buttonStyle.borderRadius}
-          onChange1={(value) => handleStyleChange("borderWidth", Number(value))}
-          onChange2={(value) =>
-            handleStyleChange("borderRadius", Number(value))
-          }
-        />
-        <InputColor
-          label="Border Color"
-          id="border-color"
-          value={buttonStyle.borderColor}
-          onChange={(value) => handleStyleChange("borderColor", value)}
-        />
-        <Title text="Typography" />
-        <ButtonTextInput
-          label="Button Text"
-          initialText={buttonStyle.buttonText}
-          onTextChange={(text) => handleStyleChange("buttonText", text)}
-        />
-        <InputText1
-          label="Font Size"
-          id="font-size"
-          value={buttonStyle.fontSize}
-          onChange={(value) => handleStyleChange("fontSize", Number(value))}
-          isBold={buttonStyle.isBold}
-          onBoldToggle={handleBoldToggle}
-        />
-        <FontDropdown id="font-family" label="Font Family" onChange={handleFontChange} />
-        <InputColor
-          label="Font Color"
-          id="font-color"
-          value={buttonStyle.fontColor}
-          onChange={(value) => handleStyleChange("fontColor", value)}
-        />
-      </div>
+    <>
+      <Navbar buttonStyle={buttonStyle} />
+      <div className="body">
+        <div className="menu">
+          <Title text="Properties" />
+          <InputColor
+            label="Button Color"
+            id="button-color"
+            value={buttonStyle.backgroundColor}
+            onChange={(value) => handleStyleChange("backgroundColor", value)}
+          />
+          <InputNumber2
+            id1="padding-x"
+            id2="padding-y"
+            label1="Padding x"
+            label2="Padding y"
+            value1={buttonStyle.paddingX}
+            value2={buttonStyle.paddingY}
+            onChange1={(value) => handleStyleChange("paddingX", Number(value))}
+            onChange2={(value) => handleStyleChange("paddingY", Number(value))}
+          />
+          <InputNumber2
+            id1="border-width"
+            id2="button-radius"
+            label1="Border Width"
+            label2="Button Radius"
+            value1={buttonStyle.borderWidth}
+            value2={buttonStyle.borderRadius}
+            onChange1={(value) =>
+              handleStyleChange("borderWidth", Number(value))
+            }
+            onChange2={(value) =>
+              handleStyleChange("borderRadius", Number(value))
+            }
+          />
+          <InputColor
+            label="Border Color"
+            id="border-color"
+            value={buttonStyle.borderColor}
+            onChange={(value) => handleStyleChange("borderColor", value)}
+          />
+          <Title text="Typography" />
+          <ButtonTextInput
+            label="Button Text"
+            initialText={buttonStyle.buttonText}
+            onTextChange={(text) => handleStyleChange("buttonText", text)}
+          />
+          <InputText1
+            label="Font Size"
+            id="font-size"
+            value={buttonStyle.fontSize}
+            onChange={(value) => handleStyleChange("fontSize", Number(value))}
+            isBold={buttonStyle.isBold}
+            onBoldToggle={handleBoldToggle}
+          />
+          <FontDropdown
+            id="font-family"
+            label="Font Family"
+            onChange={handleFontChange}
+          />
+          <InputColor
+            label="Font Color"
+            id="font-color"
+            value={buttonStyle.fontColor}
+            onChange={(value) => handleStyleChange("fontColor", value)}
+          />
+        </div>
 
-      <BodyGrid buttonStyle={buttonStyle} />
-    </div>
+        <BodyGrid buttonStyle={buttonStyle} />
+      </div>
+    </>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function BoldButton({ id, label, isBold, onToggle }) {
+
+  
   return (
     <div className="keyPairs">
       <label htmlFor={id}>{label}</label>
