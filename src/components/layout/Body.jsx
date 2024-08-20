@@ -19,7 +19,7 @@ export default function Body() {
     fontSize: 20,
     fontColor: "#f6f8fa",
     isBold: false,
-    buttonText: "Click me",
+    buttonText: "Call To Action",
     fontFamily: "Helvetica",
   });
 
